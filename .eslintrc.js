@@ -14,6 +14,9 @@ module.exports = {
     ecmaVersion: 2020
   },
   rules: {
+    "prettier/prettier": "off",
+    'quotes': [1, 'single'],
+    'semi': [2, 'never'],
     'generator-star-spacing': 'off',
     "object-curly-spacing": [
       'error',
@@ -23,7 +26,6 @@ module.exports = {
         objectsInObjects: false
       }
     ],
-    "semi": [1,"never"],
     "array-bracket-spacing": ["error","always"],
     "object-curly-spacing": ["error","always"],
     "array-bracket-spacing": ["error","never"],
