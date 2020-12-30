@@ -4,21 +4,22 @@ module.exports = {
     node: true
   },
   extends: [
-    "plugin:vue/vue3-essential",
-    "eslint:recommended",
-    "@vue/typescript/recommended",
-    "@vue/prettier",
-    "@vue/prettier/@typescript-eslint"
+    'plugin:vue/vue3-essential',
+    'eslint:recommended',
+    '@vue/typescript/recommended',
+    '@vue/prettier',
+    '@vue/prettier/@typescript-eslint'
   ],
   parserOptions: {
     ecmaVersion: 2020
   },
   rules: {
-    "prettier/prettier": "off",
-    'quotes': [1, 'single'],
-    'semi': [2, 'never'],
+    'prettier/prettier': 'off',
+    '@typescript-eslint/no-explicit-any': [ 'off' ],
+    'quotes': [ 1, 'single' ],
+    'semi': [ 2, 'never' ],
     'generator-star-spacing': 'off',
-    "object-curly-spacing": [
+    'object-curly-spacing': [
       'error',
       'always',
       {
@@ -26,11 +27,9 @@ module.exports = {
         objectsInObjects: false
       }
     ],
-    "array-bracket-spacing": ["error","always"],
-    "object-curly-spacing": ["error","always"],
-    "array-bracket-spacing": ["error","never"],
-    "no-nested-ternary": 0,
-    "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off"
+    'array-bracket-spacing': [ 'error','always' ],
+    'no-nested-ternary': 0,
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
   }
-};
+}

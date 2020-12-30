@@ -1,7 +1,7 @@
-import _examples from "@/api/modules/_example";
+import _examples from '@/api/modules/_example'
 
 const API = {
   ..._examples
-};
+}
 
-export default API;
+export default API

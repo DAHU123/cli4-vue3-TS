@@ -1,7 +1,7 @@
-const path = require('path');
+const path = require('path')
 
 function resolve(dir) {
-  return path.join(__dirname, dir);
+  return path.join(__dirname, dir)
 }
 
 module.exports = {
@@ -9,7 +9,7 @@ module.exports = {
   outputDir: 'dist/vue3',
 
   chainWebpack: config => {
-    config.resolve.alias.set('@', resolve('src'));
+    config.resolve.alias.set('@', resolve('src'))
   },
 
   productionSourceMap: false,
@@ -17,7 +17,7 @@ module.exports = {
   configureWebpack: config => {
     //调试JS
     config.devtool =
-      process.env.NODE_ENV === 'production' ? 'none' : 'eval-source-map';
+      process.env.NODE_ENV === 'production' ? 'none' : 'eval-source-map'
   },
 
   devServer: {
@@ -47,4 +47,4 @@ module.exports = {
   //     ]
   //   }
   // }
-};
+}
