@@ -14,6 +14,17 @@ module.exports = {
     ecmaVersion: 2020
   },
   rules: {
+    'generator-star-spacing': 'off',
+    "object-curly-spacing": [
+      'error',
+      'always',
+      {
+        arraysInObjects: true,
+        objectsInObjects: false
+      }
+    ],
+    "array-bracket-spacing": ["error","never"],
+    "no-nested-ternary": 0,
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off"
   }
