@@ -23,6 +23,9 @@ module.exports = {
         objectsInObjects: false
       }
     ],
+    "semi": [1,"never"],
+    "array-bracket-spacing": ["error","always"],
+    "object-curly-spacing": ["error","always"],
     "array-bracket-spacing": ["error","never"],
     "no-nested-ternary": 0,
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
