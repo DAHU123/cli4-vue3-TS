@@ -1,5 +1,6 @@
 <template>
   <div>
+    <el-button type="primary">主要按钮</el-button>
     <button @click="popUp">弹框</button>
     <div>{{message}}</div>
     <div>reversedMessage: {{reversedMessage}}</div>
