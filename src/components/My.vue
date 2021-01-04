@@ -1,7 +1,6 @@
 <template>
   <div>
-    <el-button type="primary">主要按钮</el-button>
-    <button @click="popUp">弹框</button>
+    <el-button @click="popUp" type="primary">主要按钮</el-button>
     <div>{{message}}</div>
     <div>reversedMessage: {{reversedMessage}}</div>
     <div>useCount,count:{{count}}</div>
@@ -12,7 +11,7 @@
     <div>year{{year}}</div>
     <div>month{{month}}</div>
     <div>student{{JSON.stringify(student)}}</div>
-    <button @click="login">登录</button>
+    <el-button type="danger" @click="login">登录</el-button>
   </div>
 </template>
 
@@ -26,7 +25,7 @@
   }
 
   export default defineComponent({
-    setup() {
+    setup(props, context) {
       const year = ref(2020)
       const month = ref<string | number>('9')
       const student = reactive({ name: '阿勇', age: 16, class: 'cs' }) as Student
@@ -34,6 +33,7 @@
         min: 1,
         max: 15
       })
+      console.log(context)
       return {
         year,
         month,
@@ -62,7 +62,15 @@
         alert(111)
       },
       login(){
-        // this.$api.postAccountLogin
+        // const { proxy } = getCurrentInstance()
+        // const params = {
+        //   username: 'xupengpeng',
+        //   password: '7k5458'
+        // }
+        //
+        // proxy.$api.postAccountLogin({ params }).then(res => {
+        //   console.log(res)
+        // })
       }
     }
   })

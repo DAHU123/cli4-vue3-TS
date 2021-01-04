@@ -184,6 +184,6 @@ export function register(app: any) {
 }
 
 export const options = {
-  size: 'small',
+  size: 'medium',
   zIndex: 3000
 }
