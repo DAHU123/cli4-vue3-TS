@@ -33,7 +33,21 @@
         min: 1,
         max: 15
       })
+      const obj: any = {
+        a: {
+          name: '哈哈哈',
+          value: {
+            str: '呵呵呵',
+            val: {
+              age: 12
+            }
+          }
+        }
+      }
+      const a = obj.a.name?.str ?? 'lll'
+      console.log(props)
       console.log(context)
+      console.log(a)
       return {
         year,
         month,
